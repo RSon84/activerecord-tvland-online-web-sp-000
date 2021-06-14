@@ -3,8 +3,8 @@ class Show < ActiveRecord::Base
   has_many :characters
   has_many :actors, through: :characters
   def actors_list
-    actors.collect do |character|
-    "#{actors.full_name}"
+    characters.actors.collect do |character|
+    "#{full_name}"
   end.join
 end
 end

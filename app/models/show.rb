@@ -3,9 +3,9 @@ class Show < ActiveRecord::Base
   has_many :characters
   has_many :actors
   def actors_list
-    self.Actor.all.full_name.collect do |a|
-      actors << a
-      actors
+    actors.collect do |a|
+    "#{a.full_name}"
+  end
 end
 end
 end

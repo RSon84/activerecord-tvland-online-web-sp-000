@@ -7,3 +7,5 @@ class Show < ActiveRecord::Base
       actors << a
       actors
 end
+end
+end
